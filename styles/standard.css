@@ -1,9 +1,30 @@
+:root {
+  --color-bg-dark: rgba(13, 50, 64, 1);         /* Header, Footer, Lightbox */
+  --color-bg-darker: rgba(5, 23, 31, 1);       /* Main-Background */
+  --color-text: white;                          /* Schriftfarbe */
+  --color-highlight: rgba(88, 151, 173, 1);     /* Seperator, Border etc. */
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
+  font-family: "Nunito Sans", sans-serif;
   scroll-behavior: smooth;
 }
 
 a {
   text-decoration: none;
+}
+
+button {
+  /* all: unset;  --> geht nicht, da dann auch der FOKUS (Tab) rausgenommen wird */
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer; 
+}
+
+.padding_x {
+  padding-left: 16px;
+  padding-right: 16px;
 }
