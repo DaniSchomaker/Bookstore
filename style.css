@@ -1,0 +1,60 @@
+/***** General *****/
+
+.content_container {
+  margin: 0 auto; /* damit der Content in der Mitte des Screens angezeigt wird und nicht linksbündig  */
+  padding: 0 20px;
+  max-width: 1440px;
+  width: 100%; /* wird gebraucht, weil der header eine Flexbox hat --> 100% heißt, "nimm so viel Platz wie möglich ein (bis zur max-width-Grenze) */
+}
+
+/***** Header *****/
+
+header {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  background-color: var(--color-bg-dark);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* dezente graue Linie */
+}
+
+header .content_container { /* Der .content_container wird nur für den header zur Flexbox */
+  display: flex;
+  align-items: center;   
+  gap: 12px;             
+}
+
+header img {
+  height: 48px;
+  object-fit: contain;
+}
+
+.header_logo_title {
+  color: var(--color-text);
+  font-size: 30px;
+}
+
+/***** Body/Main/headings *****/
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  color: white;
+  background-color: var(--color-bg-darker);
+  padding-bottom: 40px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 60px;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: var(--color-bg-dark);
+  border-top: 1px solid rgba(255,255,255,0.2); /* dezente graue Linie */
+}
