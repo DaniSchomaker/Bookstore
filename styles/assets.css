@@ -1,0 +1,51 @@
+.book_card {
+  width: 360px;
+  margin: 40px;
+}
+
+/* .book_img {
+    height: 120px;
+    object-fit: contain;
+} */
+
+.book_card img {
+  height: 120px;
+  object-fit: contain;
+}
+
+.book_price_and_likes {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.book_price {
+  color: rgba(128, 0, 0, 1);
+  font-size: 24px;
+  /* font-weight: 700; */
+}
+
+.book_likes {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.like_button img {
+  height: 20px;
+  object-fit: contain;
+}
+
+.book_metadata {
+  border-bottom: 2px solid var(--color-highlight);  
+  Padding: 16px 8px; /* padinng_x? */
+}
+
+.book_metadata table {
+  border-collapse: separate; /* wichtig! sonst wird border-spacing ignoriert */
+  border-spacing: 16px 0; /* horizontal 16px, vertikal 0 */
+}
+
+.comments {
+  padding-top: 16px;
+}
