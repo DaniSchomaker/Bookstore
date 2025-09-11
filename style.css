@@ -7,14 +7,30 @@
   width: 100%; /* wird gebraucht, weil der header eine Flexbox hat --> 100% heißt, "nimm so viel Platz wie möglich ein (bis zur max-width-Grenze) */
 }
 
+h1 {
+  text-align: center;
+  color: var(--color_text);
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+/* h2 {
+  padding-left: 16px;
+} */
+
+h3 {
+  padding-bottom: 8px;
+}
+
+
 /***** Header *****/
 
 header {
   display: flex;
   align-items: center;
   height: 100px;
-  background-color: var(--color-bg-dark);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* dezente graue Linie */
+  background-color: var(--color_bg_header_footer);
+  border-bottom: 2px solid var(--color_highlight); 
 }
 
 header .content_container { /* Der .content_container wird nur für den header zur Flexbox */
@@ -29,8 +45,8 @@ header img {
 }
 
 .header_logo_title {
-  color: var(--color-text);
   font-size: 30px;
+  color: var(--color_text);
 }
 
 /***** Body/Main/headings *****/
@@ -44,9 +60,11 @@ body {
 main {
   flex: 1;
   color: white;
-  background-color: var(--color-bg-darker);
+  background-color: var(--color_bg_main);
   padding-bottom: 40px;
 }
+
+/***** Footer *****/
 
 footer {
   display: flex;
@@ -54,7 +72,7 @@ footer {
   align-items: center;
   text-align: center;
   height: 60px;
-  color: rgba(255, 255, 255, 0.6);
-  background-color: var(--color-bg-dark);
-  border-top: 1px solid rgba(255,255,255,0.2); /* dezente graue Linie */
+  color: var(--color_text);
+  background-color: var(--color_bg_header_footer);
+  border-top: 1px solid var(--color_highlight); 
 }
