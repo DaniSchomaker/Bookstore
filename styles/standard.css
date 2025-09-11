@@ -1,8 +1,11 @@
 :root {
-  --color-bg-dark: rgba(13, 50, 64, 1);         /* Header, Footer, Lightbox */
-  --color-bg-darker: rgba(5, 23, 31, 1);       /* Main-Background */
-  --color-text: white;                          /* Schriftfarbe */
-  --color-highlight: rgba(88, 151, 173, 1);     /* Seperator, Border etc. */
+  --color_bg_main: rgba(5, 23, 31, 1);                  /* Main-Background */
+  --color_bg_header_footer: rgba(8, 33, 41, 1);         /* Header, Footer */
+  --color_card_dark: rgba(13, 50 ,64, 1);               /* Book-Card: dunkle Farbe */
+  --color_card_bright: rgba(18, 71, 89, 1);             /* Book-Card: helle Farbe (Buchhintergrund, Input-Feld) */
+  --color_highlight: rgba(88, 151, 173, 1);     /* Highlight-Farbe für Seperator, Border etc. */
+  --color_text: white;                          /* Schriftfarbe */
+  
 }
 
 * {
