@@ -1,19 +1,19 @@
 ////// Book Gallery //////
 
-function getBookGalleryTemplate(i) {
+function getBookGalleryTemplate(indexBooks) {
   return `
     <article class="book_card"> 
       <header class="book_card_header">
-        <h2 class="padding_x">${books[i].name}</h2>
+        <h2 class="padding_x">${books[indexBooks].name}</h2>
       </header>
 
       <img src="./assets/img/book-image.png" alt="Abbildung des Buches">
 
         <section class="book_description">
             <div class="book_price_and_likes">
-              <span class="book_price">${books[i].price} €</span>
+              <span class="book_price">${books[indexBooks].price} €</span>
               <div class="book_likes">
-                <span>${books[i].likes}</span>
+                <span>${books[indexBooks].likes}</span>
                 <button class="like_button">
                   <img src="./assets/icons/heart-thin-icon.png" alt="Like" />
                 </button>
@@ -24,39 +24,54 @@ function getBookGalleryTemplate(i) {
               <table>
                   <tr>
                     <td>Autor:</td>
-                    <td>${books[i].author}</td>
+                    <td>${books[indexBooks].author}</td>
                   </tr>
                   <tr>
                     <td>Erscheinungsjahr:</td>
-                    <td>${books[i].publishedYear}</td>
+                    <td>${books[indexBooks].publishedYear}</td>
                   </tr>
                   <tr>
                     <td>Genre:</td>
-                    <td>${books[i].genre}</td>
+                    <td>${books[indexBooks].genre}</td>
                   </tr>
               </table>
             </div>
         </section>
 
-
+        <section class="comments">
+          <h3>Kommentare:</h3>
+          ${getBookComments(indexBooks)}
+              
+        </section>
 
 
       </article>
           `;
 }
-        // <section class="comments">
-        //   <h3>Kommentare:</h3>
-        //   ${getBookComments()}
-              
-        // </section>
 
 
-// function getBookComments() {
-//   let comments = "";
-//   for (let i = 0; i < books[i].comments.length; i++) {
-//     comments += `<p>${books[i].comments[j].name}: ${books[i].comments[j].comment}</p>`;
+
+function getBookComments(indexBooks) {
+  let commentsRef = "";
+  for (let indexComments = 0; indexComments < books[indexBooks].comments.length; indexComments++) {
+    commentsRef += `<p>${books[indexBooks].comments[indexComments].name}: ${books[indexBooks].comments[indexComments].comment}</p>`;
+  }
+  return commentsRef;
+}
+
+// function getProductsCharacteristics(index) {
+//   let characteristics = "";
+
+//   for (let indexCharacteristics = 0; indexCharacteristics < products[index].Eigenschaften.length; indexCharacteristics++) {
+//     // characteristics += "<br>" + "- " + products[index].Eigenschaften[indexCharacteristics];
+//     characteristics += `<li>${products[index].Eigenschaften[indexCharacteristics]}</li>`;
 //   }
-//   return comments;
+
+//   return `
+//         ${products[index].Name}: ${products[index].Preis} €<br>
+//         Kategorie: ${products[index].Kategorie}<br>
+//         Eigenschaften: ${characteristics}<br><br>
+//       `;
 // }
 
   // let commentsRef = "";
