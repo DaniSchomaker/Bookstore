@@ -16,8 +16,8 @@ function getBookGalleryTemplate(indexBooks) {
           <span class="book_price">${books[indexBooks].price} €</span>
           <div class="book_likes">
             <span>${books[indexBooks].likes}</span>
-            <button class="like_button" onclick="addLike()">
-              <img src="./assets/icons/heart-thin-icon.png" alt="Like" />
+            <button id="heart_${indexBooks}" class="like_button" onclick="toggleLike(${indexBooks})">
+              ${getLikeIcon(indexBooks)}
             </button>
           </div>
         </div>
@@ -59,3 +59,4 @@ function getBookGalleryTemplate(indexBooks) {
     </article>
           `;
 }
+
