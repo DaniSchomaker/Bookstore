@@ -64,16 +64,24 @@
   padding: 0px 16px 16px 16px;
 }
 
-.book_metadata table {
-  border-collapse: separate; /* wichtig! sonst wird border-spacing ignoriert */
-  border-spacing: 16px 0; /* horizontal 16px, vertikal 0 */
+/* .book_metadata table { */
+  /* border-collapse: separate;  */
+  /* wichtig! sonst wird border-spacing ignoriert */
+  /* border-spacing: 4px 0;  */
+  /* horizontal 16px, vertikal 0 */
+  /* white-space: normal;  */
+/* } */
+
+.book_metadata td,
+.book_metadata th {
+  padding: 0px 4px;;                 
 }
 
 .existing_comments {
   height: 200px;
   overflow-y: auto; /* bei Bedarf erscheint ein vertikaler Scrollbalken */
   overflow-x: hidden; /* es erscheint KEIN horizontaler Scrollbalken */
-  padding: 16px 16px 0px 16px;
+  padding: 8px 16px 0px 16px;
 }
 
 .comment_formular {
@@ -111,6 +119,7 @@
 
 .send_button img {
   width: 36px;
+  height: 36px;
   object-fit: contain;
 }
 
