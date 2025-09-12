@@ -19,9 +19,9 @@ h1 {
 } */
 
 h3 {
-  padding-bottom: 8px;
+  /* padding-bottom: 8px; */
+  padding: 16px 0px 0px 16px;
 }
-
 
 /***** Header *****/
 
@@ -30,13 +30,14 @@ header {
   align-items: center;
   height: 100px;
   background-color: var(--color_bg_header_footer);
-  border-bottom: 2px solid var(--color_highlight); 
+  border-bottom: 2px solid var(--color_highlight);
 }
 
-header .content_container { /* Der .content_container wird nur für den header zur Flexbox */
+header .content_container {
+  /* Der .content_container wird nur für den header zur Flexbox */
   display: flex;
-  align-items: center;   
-  gap: 12px;             
+  align-items: center;
+  gap: 12px;
 }
 
 header img {
@@ -74,5 +75,45 @@ footer {
   height: 60px;
   color: var(--color_text);
   background-color: var(--color_bg_header_footer);
-  border-top: 1px solid var(--color_highlight); 
+  border-top: 1px solid var(--color_highlight);
+}
+
+/***** Queries *****/
+
+@media (max-width: 500px) {
+  .comment_formular input {
+    width: 240px;
+  }
+}
+
+@media (max-width: 460px) {
+  .book_metadata td {
+    display: block;
+    width: 100%;
+    padding: 4px 0;
+  }
+
+  .comment_formular input {
+    width: 200px;
+  }
+}
+
+@media (max-width: 420px) {
+  .comment_formular input {
+    width: 160px;
+  }
+}
+
+@media (max-width: 350px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  .book_price {
+    font-size: 20px;
+  }
+
+  .comment_formular input {
+    width: 100px;
+  }
 }
